@@ -80,7 +80,10 @@
           [:div
            {:style {:height (+ 75 (* 75 (- 1 pct)))
                     :display 'flex
-                    :background-color (str "rgba(255,255,255," (* 1 (* pct pct)) ")")
+                    :background-color
+                    "white"
+                    #_(str "rgba(255,255,255," (* 1 (* pct pct)) ")")
+                    
                     :align-items 'center
                     :font-family "'Lato', Helvetica, sans-serif"}}
            [:div.container
