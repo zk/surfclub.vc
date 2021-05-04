@@ -1,1 +1,1 @@
-{"cleanUrls":true,"rewrites":[{"source":"/foo/:bar","destination":"/foo/__cln__bar"}]}
+{"cleanUrls":true,"rewrites":[{"source":"/foo/:bar","destination":"/foo/__cln__bar"},{"source":"/foo/:bar/baz","destination":"/foo/__cln__bar/baz"}]}
