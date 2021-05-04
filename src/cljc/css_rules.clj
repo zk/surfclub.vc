@@ -1,4 +1,4 @@
-(ns test-site.css-rules)
+(ns css-rules)
 
 (defn rules [opts]
   [[:body {:background-color "white"}]])
