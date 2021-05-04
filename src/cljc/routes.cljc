@@ -1,7 +1,8 @@
-(ns routes)
+(ns routes
+  (:require [scvc.templates :as tpl]))
 
 (defn routes [& [opts]]
-  [["/" :browser.index/view]
+  [["/" {:name :browser.index/view
+         :template tpl/main}]
    ["/foo/:bar" :foo-bar]
    ["/foo/:bar/baz" :foo-bar-baz]])
-
