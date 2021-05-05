@@ -151,7 +151,7 @@
            [ui/g {:gap 4}
             [:h3 "Vu Tran"]
             [:h4 "Managing Partner"]
-            [:p "Snap Engineering Director, Serial Entrepeneur, YCombinator"]]]]
+            [:p "Snap Product Development Research, Serial Entrepeneur, Y Combinator"]]]]
          [:div.col-4
           [ui/g
            {:gap  24
