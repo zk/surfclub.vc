@@ -1,6 +1,6 @@
 # Surf Club Ventures
 
-(https://surfclub.vc)[https://surfclub.vc]
+[https://surfclub.vc](https://surfclub.vc)
 
 ## Dev
 
@@ -15,4 +15,11 @@ Everything is hot reloaded, even config. Change `./src/cljs-browser/
 ### Make a change
 
 Open `src/cljs-browser/browser/` in your editor. Change something, like the hero heading around line 199. Changes will be hot loaded into your browser.
+
+Good luck with parens. Maybe download an editor plugin to assist.
+
+
+## Prod Deploy
+
+Run `bin/build-prod` to deploy your changes to prod
 
