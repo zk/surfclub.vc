@@ -10,11 +10,11 @@
 
 This will boot up various stuff. Visit [http://localhost:5000](http://localhost:5000) when ready.
 
-Everything is hot reloaded, even config. Change `./src/cljs-browser/
+Everything is hot reloaded, even config.
 
 ### Make a change
 
-Open `src/cljs-browser/browser/` in your editor. Change something, like the hero heading around line 199. Changes will be hot loaded into your browser.
+Open `src/cljs-browser/browser/index.cljs` in your editor. Change something, like the hero heading text around line 199. Changes will be hot loaded into your browser.
 
 Good luck with parens. Maybe download an editor plugin to assist.
 
