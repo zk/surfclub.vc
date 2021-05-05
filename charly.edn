@@ -10,7 +10,6 @@
         :compiler
         {:main browser.entry
          :recompile-dependents true
-         :closure-warnings {:externs-validation :off}
          :parallel-build true
          :hashbang false}}}
 
