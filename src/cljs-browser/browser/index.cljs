@@ -188,7 +188,7 @@
                 :justify-content 'center}}
        [:div.container
         [:div.row
-         [:div.col-lg-6.offset-lg-3
+         [:div.col-lg-8.offset-lg-2
           [:div.hero-section
            {:style {:text-align 'center
                     :color 'white}}
@@ -197,10 +197,11 @@
                      :line-height 1.15
                      :margin-bottom 20}}
             "Surf Club" [:br] "Ventures"]
-           [:p
-            {:style {:font-size 22
-                     :margin-bottom 20}}
-            "We back companies that create a future of balance with nature, communities and ourselves."]
+           [:div.col-lg-10.offset-lg-1
+            [:p
+             {:style {:font-size 22
+                      :margin-bottom 20}}
+             "We back companies that create a future of balance with nature, communities and ourselves."]]
            [:div
             [:a {:href "#"
                  :style {:font-size 22
