@@ -10,5 +10,5 @@ bin/charly --build
 echo "Deploying static site"
 git add .
 git commit -am 'Regen vercel site'
-git push origin vercel-deploy
-
+git push origin vercel-deploy -f
+git checkout main
