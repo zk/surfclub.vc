@@ -1,13 +1,13 @@
-{:paths ["../../../src/clj"
-         "../../../src/cljc"
-         "../../../src/cljs"
-         "../../../src/cljs-browser"
-         "../../../src/cljc"
+{:paths ["../rx-lib/src/clj"
+         "../rx-lib/src/cljc"
+         "../rx-lib/src/cljs"
+         "../rx-lib/src/cljs-browser"
+         "../rx-lib/src/cljc"
          "src/cljs-browser"
          "src/cljc"
          "src/clj"]
  :deps {zk/rx-lib {:git/url "https://github.com/zk/rx-lib"
-                   :sha "945499d0a9eb7c9b2f3ab4e815182ba17c205b6b"}
+                   :sha "fb64841785aef819092aa2fe7fdcb49984876ae7"}
 
         aleph {:mvn/version "0.4.6"},
         amazonica {:mvn/version "0.3.145"},
