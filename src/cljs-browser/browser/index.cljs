@@ -196,7 +196,7 @@
             {:style {:color 'white
                      :line-height 1.15
                      :margin-bottom 20}}
-            "Surf Club" [:br] "Ventures"]
+            "Surf Club" [:br] "Ventures2"]
            [:div.col-lg-10.offset-lg-1
             [:p
              {:style {:font-size 22
