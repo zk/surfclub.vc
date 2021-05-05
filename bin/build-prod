@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+
 
 if [[ `git status --porcelain` ]]; then
   echo "Repo has uncommitted changes, please commit all changes before deploying";
@@ -10,6 +10,7 @@ fi
 echo "Regenerating vercel-deploy branch"
 git branch -D vercel-deploy
 git checkout -b vercel-deploy
+set -e
 echo "Building static site"
 bin/charly --build
 echo "Deploying static site"
