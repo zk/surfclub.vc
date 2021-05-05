@@ -353,6 +353,42 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Bungee', sans-serif;
+}
+
+.callouts-section p {
+  font-size: 19px;
+}
+
+.our-team-section h3 {
+  font-size: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+
+  .our-team-section h3 {
+    font-size: 13px;
+  }
+
+}
+
+.our-team-section h4 {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+
+  .our-team-section h4 {
+    font-size: 9px;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+
+  .our-team-section p {
+    font-size: 12px;
+  }
+
 }
