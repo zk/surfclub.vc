@@ -2,7 +2,8 @@
   (:require [rx.kitchen-sink :as ks]
             [rx.browser.page-navbar :as pn]
             [rx.browser.ui :as ui]
-            [rx.browser.buttons :as btn]))
+            [rx.browser.buttons :as btn]
+            [rx.browser.components :as cmp]))
 
 (defn navbar-btn [opts]
   [btn/button
@@ -10,9 +11,11 @@
      {:style {:padding "4px 16px"
               :border-radius 999
               :background-color 'white
-              :font-size 16
+              :font-size 14
               :font-weight 'bold
-              :color "#4F4F4F"}}
+              :color "#4F4F4F"}
+      :hover-style {:background-color "rgba(0,0,0,0.05)"}
+      :active-style {:background-color "rgba(0,0,0,0.1)"}}
      opts)])
 
 (defn lp-balance-section []
@@ -240,16 +243,21 @@
               [ui/g
                {:gap 12
                 :horizontal? true}
-               #_[navbar-btn
-                {:label "Team"}]
-               #_[navbar-btn
-                {:label "Companies"}]
-               #_[navbar-btn
-                {:label "Mission"}]
-               #_[navbar-btn
-                  {:label "Investor Login"
-                   :before [:img {:src "/img/board_shorts_icon.svg"}]}]]
-              #_[:div "HI"]]]]])}]])})
+               [ui/g {:gap 20 :horizontal? true :align-items 'center
+                      :class "d-none d-lg-flex"}
+                [navbar-btn
+                 {:label "Team"}]
+                [navbar-btn
+                 {:label "Companies"}]
+                [navbar-btn
+                 {:label "Mission"}]
+                [navbar-btn
+                 {:label "Investor Login"
+                  :before [:img {:src "/img/board_shorts_icon.svg"
+                                 :style {:width 14
+                                         :height 14}}]}]]
+               [:div.d-block.d-lg-none
+                [cmp/hamburger-menu]]]]]]])}]])})
 
 
 

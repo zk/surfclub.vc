@@ -11,6 +11,15 @@
               :content "text/html"
               :charset "UTF8"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
+      [:meta {:property "og:title" :content "Surf Club Ventures"}]
+      [:meta {:property "og:description" :content "We back companies that create a future of balance with nature, communities and ourselves."}]
+      [:meta {:property "og:image" :content "https://www.surfclub.vc/img/og_preview.jpg"}]
+      [:meta {:property "og:url" :content "https://www.surfclub.vc"}]
+
+      [:meta {:name "twitter:title" :content "Surf Club Ventures"}]
+      [:meta {:name "twitter:description" :content "We back companies that create a future of balance with nature, communities and ourselves."}]
+      [:meta {:name "twitter:image" :content "https://www.surfclub.vc/img/og_preview.jpg"}]
+      [:meta {:name "twitter:card" :content "summary_large_image"}]
       [:link {:rel "stylesheet"
               :href (str "/css/app.css?" (ks/now))}]
       [:link {:rel "preconnect"
