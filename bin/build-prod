@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+echo "Regenerating vercel-deploy branch"
+git branch -D vercel-deploy
+git checkout -b vercel-deploy
+echo "Building static site"
+bin/charly --build
+echo "Deploying static site"
+git add .
+git commit -am 'Regen vercel site'
+git push origin vercel-deploy
+
