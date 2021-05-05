@@ -17,7 +17,7 @@
 
 (defn lp-balance-section []
   [:div
-   {:style {:padding "100px 0"}}
+   {:style {:margin "150px 0"}}
    [:div.container
     [:div.row
      [:div.col-lg-6.offset-lg-3
@@ -36,12 +36,144 @@
         [:p "Surf Club Ventures is a founder led early stage venture capital firm that supports companies that transform our un-sustainable relationship with nature, and the zero-sum games that imbalance our communities and personal lives."]
         [:p "We support balanced companies and help founders that create enduring value through technology that changes the quotient of trade-offs we encounter everyday."]]]]]]])
 
+(defn lp-callouts-section []
+  [:div.callouts-section
+   [:div.container
+    [:div.row
+     [:div.col-lg-8.offset-lg-2
+      [:div.row
+       [:div.col-lg-6
+        [ui/g
+         {:gap 24}
+         [ui/g
+          {:gap 12}
+          [:img {:src "/img/alluvial_plain.jpg"
+                 :style {:width "100%"}}]
+          [:p
+           {:style {:text-align 'right}}
+           "Alluvial Cities that work in tandem with nature."]]
+
+         [ui/g
+          {:gap 12}
+          [:img {:src "/img/tools_to_support_growth.jpg"
+                 :style {:width "100%"}}]
+          [:p
+           {:style {:text-align 'left}}
+           "Physical, Emotional and Professional tools that support individual growth."]]]]
+       [:div.col-lg-6
+        [ui/g
+         {:gap 24}
+         [ui/g
+          {:gap 12}
+          [:img {:src "/img/community_empowerment.jpg"
+                 :style {:width "100%"}}]
+          [:p
+           {:style {:text-align 'right}}
+           "Community empowerment that helps lift individuals from social in-equity."]]
+
+         [ui/g
+          {:gap 12}
+          [:img {:src "/img/consumption_and_production.jpg"
+                 :style {:width "100%"}}]
+          [:p
+           {:style {:text-align 'left}}
+           "Consumption and production that reverses disaster to our environmental and personal health."]]]]]]]]])
+
+(defn lp-companies-section []
+  [:div
+   {:style {:margin "150px 0"}}
+   [:div.container
+    [:div.row
+     [:div.col-lg-8.offset-lg-2
+      [:div {:style {:align-items 'center}}
+       [:h2 {:style {:font-size 40
+                     :font-family "'Noto Serif', serif"
+                     :text-align 'center
+                     :font-weight 'normal
+                     :margin-bottom 28}}
+        "Our Companies"]
+       [:img {:src "/img/companies_placard.svg"}]]]]]])
+
+(defn lp-board-meetings-section []
+  [:div
+   {:style {:margin "150px 0"}}
+   [:div.container
+    [:div.row
+     [:div.col-lg-6.offset-lg-3
+      [:div {:style {:align-items 'center}}
+       [ui/g
+        {:gap 24}
+        [:img {:src "/img/vw-bus-icon.svg"
+               :style {:margin "0 auto"
+                       :width 80
+                       :height 80}}]
+        [:h2 {:style {:font-size 40
+                      :font-family "'Noto Serif', serif"
+                      :text-align 'center
+                      :font-weight 'normal}}
+         "Board Meetings"]
+        [:p "Startups can be grueling tests of emotional, mental and even physical endurance. As former founders we’re building infrastructure so that you can run the marathon, or catch the big wave."]
+        [:div
+         {:style {:text-align 'center}}
+         [:a {:href "#"
+              :style {:font-size 19
+                      :text-decoration 'underline
+                      :color "#072D2B"}}
+          "Come to a Board Meeting"]]]]]]]])
+
+(defn lp-our-team-section []
+  [:div.our-team-section
+   {:style {:margin "150px 0"}}
+   [:div.container
+    [:div.row
+     [:div.col-lg-10.offset-lg-1
+      [:div {:style {:align-items 'center}}
+       [ui/g
+        {:gap 24}
+        [:img {:src "/img/surfboards.svg"
+               :style {:margin "0 auto"
+                       :width 80
+                       :height 80}}]
+        [:h2 {:style {:font-size 40
+                      :font-family "'Noto Serif', serif"
+                      :text-align 'center
+                      :font-weight 'normal}}
+         "Our Team"]
+        
+        [:div.row
+         [:div.col-4
+          [ui/g {:gap  24
+                 :style {:text-align 'center}}
+           [:img {:src "/img/vu-avatar.png"}]
+           [ui/g {:gap 4}
+            [:h3 "Vu Tran"]
+            [:h4 "Managing Partner"]
+            [:p "Snap Engineering Director, Serial Entrepeneur, YCombinator"]]]]
+         [:div.col-4
+          [ui/g
+           {:gap  24
+            :style {:text-align 'center}}
+           [:img {:src "/img/josh-avatar.png"}]
+           [ui/g {:gap 4}
+            [:h3 "Josh Leong"]
+            [:h4 "Managing Partner"]
+            [:p "Google Assistant Machine Vision researcher, Autonomous Car Design, Airbnb, YC, Microsoft Excel Lead Designer, Shorts Enthusiast"]]]]
+         [:div.col-4
+          [ui/g
+           {:gap 24
+            :style {:text-align 'center}}
+           [:img {:src "/img/zk-avatar.png"}]
+           [ui/g {:gap 4}
+            [:h3 "Zachary Kim"]
+            [:h4 "Managing Partner"]
+            [:p "Zaarly CTO, Neuro-computation researcher, Hawaii Horse Rancher."]]]]]]]]]]])
+
 (defn view []
   {:render
    (fn []
      [:div.landing-page
       {:style {:width "100%"}}
-      [:div {:style {:height 150}}]
+      [:div {:style {:height 125}}]
       [:div.hero-section
        {:style {:background "url('/img/lp_hero_background.jpg')"
                 :background-position "50% 50%"
@@ -74,11 +206,19 @@
              "Say Hello"]]]]]]]
 
       [lp-balance-section]
+      [lp-callouts-section]
+      [lp-companies-section]
+      [lp-board-meetings-section]
+      [lp-our-team-section]
+      [:div {:style {:height 700
+                     :background "url('/img/surfguy.jpg')"
+                     :background-position "50% 50%"
+                     :background-size 'cover}}]
       [pn/navbar
        {:render
         (fn [{:keys [pct]}]
           [:div
-           {:style {:height (+ 75 (* 75 (- 1 pct)))
+           {:style {:height (+ 50 (* 75 (- 1 pct)))
                     :display 'flex
                     :background-color
                     "white"
@@ -93,11 +233,10 @@
                :justify-content 'space-between
                :align-items 'center
                :style {:flex 1}}
-              (let [size (+ 50 (* 25 (- 1 pct)))]
-                [:img {:src "/img/surf_club_logo.svg"
-                       :style {:width 75
-                               :height 75
-                               :transform (str "scale(" (- 1 (* pct 0.25)) ")")}}])
+              [:img {:src "/img/surf_club_logo.svg"
+                     :style {:width 75
+                             :height 75
+                             :transform (str "scale(" (- 1 (* pct 0.5)) ")")}}]
               [ui/g
                {:gap 12
                 :horizontal? true}

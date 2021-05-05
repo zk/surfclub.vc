@@ -19,33 +19,19 @@
        [:& {:font-size "50px"}])]]
    [:img {:max-width "100%"
           :display 'block}]
-   [:h1 :h2 :h3 {:font-family "'Bungee', sans-serif"}]])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   [:h1 :h2 {:font-family "'Bungee', sans-serif"}]
+   [:.callouts-section
+    [:p
+     {:font-size "19px"}]]
+   [:.our-team-section
+    [:h3
+     {:font-size "30px"}
+     (at-media bp-xs
+       [:& {:font-size "13px"}])]
+    [:h4
+     {:margin-bottom "4px"}
+     (at-media bp-xs
+       [:& {:font-size "9px"}])]
+    [:p
+     (at-media bp-xs
+       [:& {:font-size "12px"}])]]])
