@@ -221,7 +221,7 @@
        {:render
         (fn [{:keys [pct]}]
           [:div
-           {:style {:height (+ 50 (* 75 (- 1 pct)))
+           {:style {:height (+ 75 (* 75 (- 1 pct)))
                     :display 'flex
                     :background-color
                     "white"
@@ -239,7 +239,7 @@
               [:img {:src "/img/surf_club_logo.svg"
                      :style {:width 75
                              :height 75
-                             :transform (str "scale(" (- 1 (* pct 0.5)) ")")}}]
+                             :transform (str "scale(" (- 1 (* pct 0.25)) ")")}}]
               [ui/g
                {:gap 12
                 :horizontal? true}
