@@ -3,7 +3,11 @@
             [rx.browser.page-navbar :as pn]
             [rx.browser.ui :as ui]
             [rx.browser.buttons :as btn]
-            [rx.browser.components :as cmp]))
+            [rx.browser.components :as cmp]
+            [reagent.core :as r]
+            [reagent.dom :as rdom]
+            [clojure.core.async :as async
+             :refer [go <! timeout]]))
 
 (defn navbar-btn [opts]
   [btn/button
@@ -212,8 +216,10 @@
       [lp-balance-section]
       [:video
        {:width "100%"
+        :autoPlay "autoPlay"
         :autoplay "autoplay"
-        :loop "loop"}
+        :loop "loop"
+        :muted "muted"}
        [:source {:src "/vid/windpower.mp4" :type "video/mp4" }]]
       #_[lp-callouts-section]
       [lp-companies-section]
