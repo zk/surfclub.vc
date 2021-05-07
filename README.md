@@ -4,14 +4,7 @@
 
 ## Dev
 
-* Install Java
-```
-brew tap homebrew/cask-versions
-brew update
-brew tap caskroom/cask
-brew cask install java
-```
-
+* Install Java `brew install java`
 * Install Clojure `brew install clojure/tools/clojure`
 * `git clone git@github.com:zk/surfclub.vc && cd surfclub.vc`
 * `bin/charly --dev`

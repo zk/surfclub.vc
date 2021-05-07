@@ -210,7 +210,12 @@
              "Say Hello"]]]]]]]
 
       [lp-balance-section]
-      [lp-callouts-section]
+      [:video
+       {:width "100%"
+        :autoplay "autoplay"
+        :loop "loop"}
+       [:source {:src "/vid/windpower.mp4" :type "video/mp4" }]]
+      #_[lp-callouts-section]
       [lp-companies-section]
       [lp-board-meetings-section]
       [lp-our-team-section]
