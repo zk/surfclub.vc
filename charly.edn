@@ -1,16 +1,16 @@
-{:id "charly-test-site"
+{:id "surf-club-vc"
  :project-root "./"
- :routes routes/routes
+ :client-routes scvc.routes/routes
+ :default-page-template scvc.templates/main
  :css-preamble ["resources/css/reset.css"
                 "resources/css/bootstrap-grid.min.css"]
- :css-files [{:rules css-rules/rules
-              :rules-path "src/cljc/css_rules.cljc"
+ :css-files [{:rules scvc.css-rules/rules
               :path "app.css"}]
- :cljs {:figwheel {}
-        :compiler
-        {:main browser.entry
-         :recompile-dependents true
-         :parallel-build true
-         :hashbang false}}}
+ :client-cljs {:figwheel {}
+               :compiler
+               {:main scvc.browser.entry
+                :recompile-dependents true
+                :parallel-build true
+                :hashbang false}}}
 
 

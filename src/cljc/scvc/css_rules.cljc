@@ -1,4 +1,4 @@
-(ns css-rules
+(ns scvc.css-rules
   (:require [garden.stylesheet :refer [at-media]]
             [garden.core :as garden]))
 
@@ -11,7 +11,7 @@
 (def bp-xl {:min-width "1200px"})
 
 (defn rules [opts]
-  [[:body {:font-family "'Lato', 'Helvetica Neue', sans-serif"}]
+  [[:body {:font-family "'Noto Serif', 'Helvetica Neue', sans-serif"}]
    [:.landing-page {:font-family "'Noto Serif', serif"}]
    [:.hero-section
     [:h1 {:font-size "80px"}

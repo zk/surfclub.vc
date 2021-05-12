@@ -1,4 +1,4 @@
-(ns browser.index
+(ns scvc.browser.pages
   (:require [rx.kitchen-sink :as ks]
             [rx.browser.page-navbar :as pn]
             [rx.browser.ui :as ui]
@@ -175,7 +175,7 @@
             [:h4 "Managing Partner"]
             [:p "Zaarly CTO, Neuro-computation researcher, Hawaii Horse Rancher."]]]]]]]]]]])
 
-(defn view []
+(defn index []
   {:render
    (fn []
      [:div.landing-page
@@ -271,7 +271,143 @@
                [:div.d-block.d-lg-none
                 [cmp/hamburger-menu]]]]]]])}]])})
 
+(defn surf-club-hero-section []
+  [:div {:style {:width "100%"
+                 :height "100%"
+                 :background-color "#0AA49A"
+                 :display 'flex
+                 :align-items 'center
+                 :justify-content 'center
+                 :position 'relative
+                 :color 'white}}
+   [:div {:style {:width "80%"
+                  :height "80%"
+                  :background-image "url('/img/wave-graphic.svg')"
+                  :background-repeat 'no-repeat
+                  :background-position "50% 50%"
+                  :background-size 'contain
+                  :display 'flex
+                  :flex-direction 'column
+                  :align-items 'center
+                  :justify-content 'center}}
+    [:h1
+     {:style {:font-size "12vw"
+              :line-height 1}}
+     "Surf"
+     [:br]
+     "Club"
+     [:br]]
+    [:h1
+     {:style {:font-size "5.8vw"
+              :line-height 1.1}}
+     "Ventures"]]
+   [:div {:style {:position 'absolute
+                  :bottom 0
+                  :left 0
+                  :right 0
+                  :padding 20
+                  :text-align 'center
+                  :font-size "1vw"}}
+    "Proprietary & Confidential"]])
 
+(defn fund-intro-section []
+  [:div {:style {:width "100%"
+                 :min-height "100%"
+                 :background-color "#0AA49A"
+                 :display 'flex
+                 :flex-direction 'column
+                 :color 'white}}
+   [:div {:style {:flex 1
+                  :display 'flex
+                  :flex-direction 'column
+                  :justify-content 'flex-end
+                  :background-image "url('/img/hawaii_city_fund_bg.jpg')"
+                  :background-repeat 'no-repeat
+                  :background-position "50% 100%"
+                  :background-size 'cover
+                  :padding "80px 40px"}}
+    [ui/g {:gap 10}
+     [:img {:src "/img/surf_club_logo.svg"
+            :style {:width "10vw"}}]
+     [:h2
+      {:style {:font-size "6vw"}}
+      "Dawn Patrol 1"]
+     [:div {:style {:font-size "4vw"}}
+      "US $5,500,000 Limited Partner Interest"]]]
+   [:div {:style {:min-height 300
+                  :width "100%"
+                  :padding 40
+                  :background-color "#0AA49A"}}
+    [:div.container-fluid
+     [:div.row
+      [:div.col-lg-4
+       [:p
+        {:style {:font-size 17
+                 :margin-bottom 20}}
+        "This presentation is supplied to you in connection with your proposed investment in Dawn Patrol 1 (the “Fund”) and providesn certain confidential information on it’s investment manager. This presentation does not constitute an offering of interests in the Fund and any interests in the Fund are being offered solely on the basis of the Fund’s"]]
+      [:div.col-lg-4
+       [:p
+        {:style {:font-size 17
+                 :margin-bottom 20}}
+        "Confidential Private Offering Memorandum. Numbers current as of end of March 2021. Do not copy or distribute."]
+       [:p
+        {:style {:font-size 17
+                 :font-weight 'bold}}
+        "Proprietary & Confidential"]
+       [:p
+        {:style {:font-size 17
+                 :font-weight 'bold}}
+        "© 2021 Surf Club Ventures"]]]]]])
 
+(defn fund-highlights-section []
+  [:div
+   {:style {:background-image "url('/img/wave-shadow.svg')"
+            :background-position "50% 50%"
+            :background-size 'cover
+            :background-repeat 'no-repeat
+            :padding "80px 0"}}
+   [:div.container
+    [:div.row
+     {:style {:margin-bottom 50}}
+     [:div.col-lg-10.offset-lg-1
+      [ui/g
+       {:gap 20
+        :horizontal? true
+        :align-items 'center}
+       [:img {:src "/img/wave-dark.svg"
+              :style {:width 100
+                      :height 100}}]
+       [:h2
+        {:style {:color "#0AA49A"
+                 :font-size 50}}
+        "HIGHLIGHTS"]]]]
+    [:div.row
+     [:div.col-lg-10.offset-lg-1
+      [:div.row
+       [:div.col-lg-6
+        [:h3 {:style {:font-size 36
+                      :margin-bottom 16}}
+         "Early Investments"]
+        [:p
+         {:style {:font-size 22}}
+         "Proven track record of early investments in transformational companies, with standouts returning 80X."]
+        [:div {:style {:padding "40px 0"}}
+         [:hr]]
+        [:img {:src "/img/companies-fund-graphic.svg"
+               :style {:display 'block
+                       :width "100%"}}]]
+       [:div.col-lg-6
+        [:h3 {:style {:font-size 36
+                      :margin-bottom 16}}
+         "Deep Experience LPs"]]]]]]])
 
+(defn dawn-patrol-fund []
+  {:render
+   (fn []
+     [:div {:style {:width "100%"
+                    :height "100%"
+                    :style {:font-family "'Noto Serif', serif"}}}
+      [surf-club-hero-section]
+      [fund-intro-section]
+      [fund-highlights-section]])})
 

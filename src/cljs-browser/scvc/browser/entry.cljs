@@ -1,9 +1,8 @@
-(ns browser.entry
-  (:require [routes]
+(ns scvc.browser.entry
+  (:require [scvc.routes]
             [rx.browser :as browser]
             [reitit.core :as rei]
-
-            [browser.index]))
+            [scvc.browser.pages]))
 
 (defn dispatch-route [routes handlers & [opts]]
   (let [uri (or (:uri opts)
@@ -24,11 +23,12 @@
         (f)))))
 
 (defn handlers []
-  {:browser.index/view browser.index/view})
+  {:index scvc.browser.pages/index
+   :dawn-patrol-fund scvc.browser.pages/dawn-patrol-fund})
 
 (defn init []
   (dispatch-route
-    (routes/routes)
+    (scvc.routes/routes)
     (handlers)
     {:not-found (fn []
                   (browser/<show-component!
