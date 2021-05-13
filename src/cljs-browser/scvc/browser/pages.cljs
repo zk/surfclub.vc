@@ -591,7 +591,7 @@
          "In the simple case of solar power, unceasing technological progress of silicon has fast made it economical suicide to build anything but."]
         [:p {:style {:font-size 22
                      :margin-bottom 20}}
-         "Today through a series of tradegy of the commons we strip the very land and pollute the very oceans that we derive our sustenance from. "]
+         "Today through a series of tragedy of the commons we strip the very land and pollute the very oceans that we derive our sustenance from. "]
         [:p {:style {:font-size 22
                      :margin-bottom 20}}
          "Wheat the original impetus for organized society has declined in protein value by 50% over the past 100 years, not to mention the other necessary nutrients across all industrially farmed products."]
