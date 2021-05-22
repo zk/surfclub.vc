@@ -33,7 +33,13 @@
 
 (defn lp-balance-section []
   [:div
-   {:style {:margin "150px 0"}}
+   {:style {:margin "100px 0"
+            :position 'relative}}
+   [:img {:src "/img/wave-shadow.svg"
+          :style {:position 'absolute
+                  :top 0
+                  :left 0
+                  :right 0}}]
    [:div.container
     [:div.row
      [:div.col-lg-8.offset-lg-2
@@ -102,29 +108,39 @@
 
 (defn lp-companies-section []
   [:div
-   {:id "companies"
-    :style {:margin "150px 0"}}
-   [:div.container
-    [:div.row
-     [:div.col-lg-8.offset-lg-2
-      [:div {:style {:align-items 'center}}
-       [:h2 {:style {:font-size 40
-                     :font-family "'Noto Serif', serif"
-                     :text-align 'center
-                     :font-weight 'normal
-                     :margin-bottom 40}}
-        "You're in good company"]]]]]
-   [:div {:style {:background-color "#5EC1BB"
-                  :padding "80px 0"}}
+   {:style {:background-color 'white
+            :padding "75px 0"}}
+   [:div
+    {:id "companies"
+     :style {:margin "75px 0"}}
     [:div.container
      [:div.row
       [:div.col-lg-8.offset-lg-2
        [:div {:style {:align-items 'center}}
-        [:img {:src "/img/companies-placard-white.svg"}]]]]]]])
+        [:h2 {:style {:font-size 40
+                      :font-family "'Noto Serif', serif"
+                      :text-align 'center
+                      :font-weight 'normal
+                      :margin-bottom 40}}
+         "You're in good company"]]]]]
+    [:div {:style {:background-color "#5EC1BB"
+                   :padding "80px 0"}}
+     [:div.container
+      [:div.row
+       [:div.col-lg-8.offset-lg-2
+        [:div {:style {:align-items 'center}}
+         [:img {:src "/img/companies-placard-white.svg"}]]]]]]]])
 
 (defn lp-board-meetings-section []
   [:div
-   {:style {:margin "150px 0"}}
+   {:style {:margin "150px 0"
+            :position 'relative}}
+   [:img {:src "/img/wave-shadow-right.svg"
+          :style {:position 'absolute
+                  :top 0
+                  :left 0
+                  :right 0
+                  :z-index -1}}]
    [:div.container
     [:div.row
      [:div.col-lg-6.offset-lg-3
@@ -215,7 +231,14 @@
 
 (defn lp-new-balance-section []
   [:div
-   {:style {:margin "150px 0"}}
+   {:style {:margin "150px 0"
+            :position 'relative}}
+   [:img {:src "/img/wave-shadow-left.svg"
+          :style {:position 'absolute
+                  :top 0
+                  :left 0
+                  :right 0
+                  :z-index -1}}]
    [:div.container
     [:div.row
      [:div.col-lg-8.offset-lg-2
@@ -249,7 +272,7 @@
       {:style {:width "100%"}}
       [:div {:style {:height 125}}]
       [:div.hero-section
-       {:style {:background "url('/img/lp_hero_background.jpg')"
+       {:style {:background "url('/img/lp-hero-bg.jpg')"
                 :background-position "50% 50%"
                 :background-size 'cover
                 :min-height 700
@@ -261,24 +284,17 @@
         [:div.row
          [:div.col-lg-8.offset-lg-2
           [:div.hero-section
-           {:style {:text-align 'center
-                    :color 'white}}
-           [:h1
-            {:style {:color 'white
-                     :line-height 1.15
-                     :margin-bottom 20}}
-            "Surf Club" [:br] "Ventures"]
-           [:div.col-lg-10.offset-lg-1
-            [:p
-             {:style {:font-size 22
-                      :margin-bottom 20}}
-             "We back companies that create a future of balance with nature, communities and ourselves."]]
-           #_[:div
-              [:a {:href "#"
-                   :style {:font-size 22
-                           :color 'white
-                           :text-decoration 'underline}}
-               "Say Hello"]]]]]]]
+           [:img {:src "/img/lp-hero-fg.svg"
+                  :alt "Surf Club Ventures"}]]]]]]
+      [:div {:style {:height 40}}]
+      [:div.container
+       [:div.row
+        [:div.col-lg-8.offset-lg-2
+         [:h3
+          {:style {:font-size 32
+                   :margin-bottom 20
+                   :text-align 'center}}
+          "We back technology companies that create a future of balance with nature, communities and ourselves."]]]]
 
       [lp-balance-section]
       [lp-alluvial-cities-section]
@@ -1024,5 +1040,3 @@
       [portfolio-strategy-section]
       [fund-summary-section]
       [:div {:style {:height 400}}]])})
-
-
