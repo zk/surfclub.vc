@@ -40,5 +40,5 @@ jobs:
           git add .
           git commit -am 'Regen site'
           git push origin $branch_name -f
-        working-directory: ./web
+        working-directory: ./
       - run: echo "🍏 This job's status is ${{ job.status }}."
