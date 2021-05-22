@@ -282,7 +282,7 @@
                 :justify-content 'center}}
        [:div.container
         [:div.row
-         [:div.col-lg-8.offset-lg-2
+         [:div.col-lg-10.offset-lg-1
           [:div.hero-section
            [:img {:src "/img/lp-hero-fg.svg"
                   :alt "Surf Club Ventures"}]]]]]]
