@@ -117,7 +117,7 @@
      [:div.row
       [:div.col-lg-8.offset-lg-2
        [:div {:style {:align-items 'center}}
-        [:h2 {:style {:font-size 40
+        [:h2 {:style {:font-size 30
                       :font-family "'Noto Serif', serif"
                       :text-align 'center
                       :font-weight 'normal
