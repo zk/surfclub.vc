@@ -1001,9 +1001,8 @@
             {:style subhead-style}
             "Capital Call Schedule"]
            [:p {:style para-style}
-            "Approx. 30% yearly: Year 1-2, 20% Year 3, as needed year 4-7 for follow-ons."]]]]]]
+            "Approx. 30% yearly: Year 1-2, 20% Year 3, as needed year 4-7 for follow-ons."]]]]]]]]))
 
-      ]]))
 
 (defn dawn-patrol-fund []
   {:render
