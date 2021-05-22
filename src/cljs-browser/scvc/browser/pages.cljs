@@ -361,8 +361,8 @@
                     :before [:img {:src "/img/board_shorts_icon.svg"
                                    :style {:width 14
                                            :height 14}}]}]]
-               [:div.d-block.d-lg-none
-                [cmp/hamburger-menu]]]]]]])}]])})
+               #_[:div.d-block.d-lg-none
+                  [cmp/hamburger-menu]]]]]]])}]])})
 
 (defn surf-club-hero-section []
   [:div {:style {:width "100%"
