@@ -1,4 +1,4 @@
-name: welcome-web
+name: surfclub-web
 on: [push]
 jobs:
   build-frontend:

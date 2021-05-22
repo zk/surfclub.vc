@@ -1,4 +1,5 @@
-{:paths ["../rx-lib/src/clj"
+{:id "surfclub-web"
+ :paths ["../rx-lib/src/clj"
          "../rx-lib/src/cljc"
          "../rx-lib/src/cljs"
          "../rx-lib/src/cljs-browser"
