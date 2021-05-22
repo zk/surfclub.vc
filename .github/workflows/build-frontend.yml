@@ -23,7 +23,7 @@ jobs:
           branch_name=deploy-${branch_name:-HEAD}
           
           echo "Regenerating $branch_name branch"
-          git branch -D $branch_name
+          git branch -D $branch_name || true
           git checkout -b $branch_name
         working-directory: ./
       - name: tools.deps-builder
