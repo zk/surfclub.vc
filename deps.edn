@@ -7,7 +7,7 @@
          "src/cljc"
          "src/clj"]
  :deps {zk/rx-lib {:git/url "https://github.com/zk/rx-lib"
-                   :sha "fb64841785aef819092aa2fe7fdcb49984876ae7"}
+                   :sha "7491b582995d1ab3f4da6c1560d865253bbccb15"}
 
         aleph {:mvn/version "0.4.6"},
         amazonica {:mvn/version "0.3.145"},
