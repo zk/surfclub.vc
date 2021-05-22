@@ -1,0 +1,44 @@
+name: welcome-web
+on: [push]
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: git config --global user.email "zachary.kim@gmail.com"
+      - run: git config --global user.name "zk"
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Recreate deploy branch
+        run: |
+          branch_name=$(git symbolic-ref -q HEAD)
+          branch_name=${branch_name##refs/heads/}
+          branch_name=deploy-${branch_name:-HEAD}
+          
+          echo "Regenerating $branch_name branch"
+          git branch -D $branch_name
+          git checkout -b $branch_name
+        working-directory: ./
+      - name: tools.deps-builder
+        uses: vouch-opensource/tools.deps-build@1.0.1
+        with:
+          working-directory: ./
+          alias: :build-web
+      - name: Commit and push changes
+        run: |
+          branch_name=$(git symbolic-ref -q HEAD)
+          branch_name=${branch_name##refs/heads/}
+          branch_name=${branch_name:-HEAD}
+          
+          git add .
+          git commit -am 'Regen site'
+          git push origin $branch_name -f
+        working-directory: ./web
+      - run: echo "🍏 This job's status is ${{ job.status }}."
