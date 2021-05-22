@@ -11,6 +11,9 @@
                {:main scvc.browser.entry
                 :recompile-dependents true
                 :parallel-build true
-                :hashbang false}}}
+                :hashbang false}}
+
+ :client-cicd {:git-user-email "zachary.kim@gmail.com"
+               :git-user-name "zk"}}
 
 
