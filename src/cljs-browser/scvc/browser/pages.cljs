@@ -108,8 +108,15 @@
 
 (defn lp-companies-section []
   [:div
-   {:style {:background-color 'white
-            :padding "75px 0"}}
+   {:style {:background-color "#0AA49A"
+            :color 'white
+            :padding "75px 0"
+            :position 'relative}}
+   [:img {:src "/img/wave-shadow-left.svg"
+          :style {:position 'absolute
+                  :top 300
+                  :left 0
+                  :width 1200}}]
    [:div
     {:id "companies"
      :style {:margin "75px 0"}}
@@ -117,14 +124,18 @@
      [:div.row
       [:div.col-lg-8.offset-lg-2
        [:div {:style {:align-items 'center}}
-        [:h2 {:style {:font-size 30
+        [:img {:src "/img/surfboards-white.svg"
+               :style {:display 'block
+                       :margin "0 auto"
+                       :height 100
+                       :margin-bottom 40}}]
+        [:h2 {:style {:font-size 50
                       :font-family "'Noto Serif', serif"
                       :text-align 'center
                       :font-weight 'normal
                       :margin-bottom 40}}
-         "You're in good company"]]]]]
-    [:div {:style {:background-color "#5EC1BB"
-                   :padding "80px 0"}}
+         "You're in great company"]]]]]
+    [:div {:style {:padding "80px 0"}}
      [:div.container
       [:div.row
        [:div.col-lg-8.offset-lg-2
@@ -212,6 +223,81 @@
             [:h4 "Managing Partner"]
             [:p "Former Zaarly CTO, Neuro-computation researcher, Hawaii horse rancher"]]]]]]]]]]])
 
+(defn photo-our-team-section []
+  [:div.our-team-section
+   {:id "team"
+    :style {:margin "0 0 150px 0"}}
+   [:div
+    [:div
+     {:style {:width "100%"
+              :max-width 1200
+              :margin "0 auto 60px auto"
+              :position 'relative}}
+     [:img {:src "/img/team-photo.jpg"
+            :style {:width "100%"
+                    :display 'block
+                    :margin "0 auto 60px auto"
+                    :max-width 1200}}]
+
+     [:img {:src "/img/surf-club-partners-logo.svg"
+            :style {:position 'absolute
+                    :top 40
+                    :right 40
+                    :width 120}}]]]
+   [:div.container
+    [:div.row
+     [:div.col-lg-12
+      [:div {:style {:align-items 'center}}
+       [ui/g
+        {:gap 24}
+        
+        [:div.row
+         [:div.col-4
+          [ui/g {:gap  24}
+           [ui/g {:gap 4}
+            [:h3
+             {:style {:font-weight 'normal
+                      :font-size 38}}
+             "Vu Tran"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "General Partner"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "2x YC founder, Snap Crypto engineering research lead, serial entrepreneur, real estate investor, experienced venture capitalist."]
+            [:p "Vu has a deep technical and product background. He can write legitimately good code and has lead large scale engineering efforts at both Postmates and Snapchat as an individual contributor and as a senior manager."]]]]
+         [:div.col-4
+          [ui/g
+           {:gap 24}
+           [ui/g {:gap 4}
+            [:h3
+             {:style {:font-weight 'normal
+                      :font-size 38}}
+             "Zack Kim"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "General Partner"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "YC founder, former Zaarly CTO, angel investor, LISP hacker, horse rancher."]
+            [:p "Zack comes from a deeply technical background. As a Neurosurgical methods researcher he aided individuals suffering from Parkinson's disease in reducing essential tremors via an electrical impulse device."]]]]
+         [:div.col-4
+          [ui/g
+           {:gap  24}
+           [ui/g {:gap 4}
+            [:h3
+             {:style {:font-weight 'normal
+                      :font-size 38}}
+             "Josh Leong"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "General Partner"]
+            [:h4
+             {:style {:margin-bottom 20}}
+             "YC founder, Google Assistant machine vision research, autonomous car design. Airbnb principal, Microsoft Excel lead designer, shorts enthusiast."]
+            [:p "Inspired by his time collaborating with  CDG the former Xerox Parc Researchers famous for inventing the first two computing revolutions, Josh is investing and inventing in the next personal computation revolution."]]]]
+         ]]]]]]])
+
 (defn lp-alluvial-cities-section []
   [:div
    [:div.container
@@ -223,11 +309,12 @@
         :autoplay "autoplay"
         :loop "loop"
         :muted "muted"
-        :style {:margin "0 0 8px 0"}}
+        :style {:margin "0 0 8px 0"}
+        :poster "/img/building-cities-cover.jpg"}
        [:source {:src "/vid/windpower.mp4" :type "video/mp4" }]]
       [para
        {:style {:text-align 'right}}
-       "Surf Club Project - Building Alluvial Cities"]]]]])
+       "Surf Lab - Building New Cities"]]]]])
 
 (defn lp-new-balance-section []
   [:div
@@ -264,6 +351,55 @@
        [:div.col-lg-6
         [para "The big problems left to be solved today are deeply complex; unable to be solved with our existing tools whether they be organizational, mechanical, electrical or even traditional software."]
         [para "However they also represent the biggest opportunity for long term economic return, regenerative eco-systems, and inclusive societies."]]]]]]])
+
+
+(defn lp-dawn-patrol-network []
+  [:div
+   {:style {:margin "150px 0 0 0"
+            :position 'relative}}
+   [:div.container
+    [:div.row
+     [:div.col-lg-8.offset-lg-2
+      [:div.row
+       [:div.col-lg-12
+        [:div {:style {:text-align 'center}}
+         [:img {:src "/img/dawn-patrol-logo.png"
+                :style {:margin "0 auto 50px auto"
+                        :height 150}}]
+         [:h2 {:style {:font-size 45
+                       :font-family "'Noto Serif', serif"
+                       :text-align 'center
+                       :font-weight 'normal
+                       :margin "0 auto 60px auto"}}
+          "Dawn Patrol Network"]]]]
+      [:div.row
+       [:div.col-lg-6
+        [para
+         "Surf Club is run by founders who can build. We invest, lead and drive impact into communities with real world projects and software and it’s no different in how we approach venture."]]
+       [:div.col-lg-6
+        [para "The Dawn Patrol Network is a community run platform of founders discovering and vetting new companies built on top of a web3 staking incentive system."]]]
+      [:div {:style {:height 40}}]
+      [:div.row
+       [:div.col-lg-12
+        [:img {:src "/img/dawn-patrol-supporters.png"
+               :style {:display 'block
+                       :margin "0 auto"}}]]]
+      [:div {:style {:height 80}}]
+      [:div.row
+       [:div.col-lg-8.offset-lg-2
+        [:img {:src "/img/dawn-patrol-sign-up-button.svg"
+               :style {:display 'block
+                       :margin "0 auto 16px 0"}}]
+        [para
+         {:style {:font-size 16
+                  :text-align 'center}}
+         "Currently prioritizing YC and Surf Club Founders"]]]]]
+    [:div {:style {:height 100}}]
+    [:div.row
+     [:div.col-lg-10.offset-lg-1
+      [:img {:src "/img/dawn-patrol-screens.png"
+             :style {:display 'block
+                     :margin "0 auto"}}]]]]])
 
 (defn index []
   {:render
@@ -313,8 +449,9 @@
               :style {:display 'block
                       :width 200
                       :margin 30}}]]
-      
-      [lp-our-team-section]
+
+      [lp-dawn-patrol-network]
+      [photo-our-team-section]
 
 
       [:div {:style {:height 100}}]
@@ -515,7 +652,7 @@
          {:style {:font-size 30
                   :margin-bottom 20}}
          "Peace cannot be kept by force; it can only be achieved by understanding."]
-        [:p "Albert Einstien, Ralph Waldo Emerson"]]]]]]
+        [:p "Albert Einstien"]]]]]]
    [:div
     {:style {:margin "100px 0"}}
     [:div.container
@@ -573,27 +710,27 @@
 
 (defn thesis-section []
   [:div
-   [:div {:style {:width "100%"
-                  :height 400
-                  :background-image "url('/img/hawaii-city-page-header-bg.jpg')"
-                  :background-position "50% 50%"
-                  :background-size 'cover
-                  :display 'flex
-                  :align-items 'center
-                  :justify-content 'center
-                  }}
-    [:div.container
-     [:div.row
-      [:div.col-lg-8.offset-lg-2
+   #_[:div {:style {:width "100%"
+                    :height 400
+                    :background-image "url('/img/hawaii-city-page-header-bg.jpg')"
+                    :background-position "50% 50%"
+                    :background-size 'cover
+                    :display 'flex
+                    :align-items 'center
+                    :justify-content 'center
+                    }}
+      [:div.container
+       [:div.row
+        [:div.col-lg-8.offset-lg-2
        
-       [:div
-        {:style {:color 'white
-                 :text-align 'center}}
-        [:h3
-         {:style {:font-size 30
-                  :margin-bottom 20}}
-         "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present."]
-        [:p "Marcus Aurelius"]]]]]]
+         [:div
+          {:style {:color 'white
+                   :text-align 'center}}
+          [:h3
+           {:style {:font-size 30
+                    :margin-bottom 20}}
+           "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present."]
+          [:p "Marcus Aurelius"]]]]]]
    [:div
     {:style {:margin "100px 0"}}
     [:div.container
@@ -1033,7 +1170,7 @@
       [thesis-overview-section]
       [thesis-section]
       [thesis-2-section]
-      [farmy-project]
+      #_[farmy-project]
       [new-generation-of-founders-section]
       [lp-our-team-section]
       [fund-infra-section]
