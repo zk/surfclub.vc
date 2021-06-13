@@ -169,11 +169,12 @@
        [para "Hawaii is the home of surfing, a practice that is deeply ingrained in its culture and history. It’s a practice in connecting with nature, community and oneself. Come out and catch a wave with us sometime."]
        [:div
         {:style {:text-align 'center}}
-        [:a {:href "mailto:josh.leong@gmail.com"
+        [:a {:href "https://calendly.com/surfclubventures/board-meeting"
+             :target "_blank"
              :style {:font-size 19
                      :text-decoration 'underline
                      :color "#072D2B"}}
-         "Come to a Board Meeting"]]]]]]])
+         "Attend a Board Meeting"]]]]]]])
 
 (defn lp-our-team-section []
   [:div.our-team-section
@@ -264,7 +265,7 @@
              "General Partner"]
             [:h4
              {:style {:margin-bottom 20}}
-             "2x YC founder, Snap Crypto engineering research lead, serial entrepreneur, real estate investor, experienced venture capitalist."]
+             "2x YC Founder, Snap Crypto engineering research lead, serial entrepreneur, real estate investor, experienced venture capitalist."]
             [:p "Vu has a deep technical and product background. He can write legitimately good code and has lead large scale engineering efforts at both Postmates and Snapchat as an individual contributor and as a senior manager."]]]]
          [:div.col-4
           [ui/g
@@ -279,7 +280,7 @@
              "General Partner"]
             [:h4
              {:style {:margin-bottom 20}}
-             "YC founder, former Zaarly CTO, angel investor, LISP hacker, horse rancher."]
+             "YC Founder, former Zaarly CTO, angel investor, LISP hacker, horse rancher."]
             [:p "Zack comes from a deeply technical background. As a Neurosurgical methods researcher he aided individuals suffering from Parkinson's disease in reducing essential tremors via an electrical impulse device."]]]]
          [:div.col-4
           [ui/g
@@ -294,7 +295,7 @@
              "General Partner"]
             [:h4
              {:style {:margin-bottom 20}}
-             "YC founder, Google Assistant machine vision research, autonomous car design. Airbnb principal, Microsoft Excel lead designer, shorts enthusiast."]
+             "YC Founder, Google Assistant machine vision research, autonomous car design. Airbnb principal, Microsoft Excel lead designer, shorts enthusiast."]
             [:p "Inspired by his time collaborating with  CDG the former Xerox Parc Researchers famous for inventing the first two computing revolutions, Josh is investing and inventing in the next personal computation revolution."]]]]
          ]]]]]]])
 
@@ -386,12 +387,24 @@
                        :margin "0 auto"}}]]]
       [:div {:style {:height 80}}]
       [:div.row
-       [:div.col-lg-8.offset-lg-2
-        [:img {:src "/img/dawn-patrol-sign-up-button.svg"
-               :style {:display 'block
-                       :margin "0 auto 16px 0"}}]
+       [:div.col-lg-10.offset-lg-1
+        [btn/button
+         {:label "Sign up for the Beta"
+          :href "https://docs.google.com/forms/d/e/1FAIpQLSdtRKBzkVHPbqNwed2i5NqIziqbh9Jrweq4_8vPRMtz4_ju3g/viewform"
+          :target "_blank"
+          :style {:background-color "#34A1F4"
+                  :margin "0 auto 20px auto"
+                  :color 'white
+                  :padding "16px 90px"
+                  :letter-spacing 1
+                  :border-radius 999
+                  :font-size 28
+                  :text-decoration 'none}
+          :hover-style {:background-color "#238AD9"}
+          :active-style {:background-color "#275E87"}}]
         [para
-         {:style {:font-size 16
+         {:style {:font-size 15
+                  :color "#072D2B"
                   :text-align 'center}}
          "Currently prioritizing YC and Surf Club Founders"]]]]]
     [:div {:style {:height 100}}]
@@ -400,6 +413,17 @@
       [:img {:src "/img/dawn-patrol-screens.png"
              :style {:display 'block
                      :margin "0 auto"}}]]]]])
+
+(defn tshirt-logo-section []
+  [:div
+   {:style {:background-image "url('/img/thesis-overview-bg.jpg')"
+            :background-repeat 'no-repeat
+            :background-size 'cover}}
+   [:img {:src "/img/surf-club-tshirt-logo.svg"
+          :style {:display 'block
+                  :margin "0 auto"
+                  :padding "100px 0"
+                  :width "90vw"}}]])
 
 (defn index []
   {:render
@@ -452,10 +476,8 @@
 
       [lp-dawn-patrol-network]
       [photo-our-team-section]
+      [tshirt-logo-section]
 
-
-      [:div {:style {:height 100}}]
-      
       [pn/navbar
        {:render
         (fn [{:keys [pct]}]
@@ -539,6 +561,55 @@
                   :text-align 'center
                   :font-size "1vw"}}
     "Proprietary & Confidential"]])
+
+(defn dp-pitch-embed []
+  [:div {:style {:width "100%"
+                 :height "100%"
+                 :background-color "#0AA49A"
+                 :display 'flex
+                 :align-items 'center
+                 :justify-content 'center
+                 :position 'relative
+                 :color 'white}}
+   [:div {:style {:width "100%"
+                  :height "100%"
+                  :background-image "url('/img/pitch-bg.jpg')"
+                  :background-repeat 'no-repeat
+                  :background-position "50% 50%"
+                  :background-size 'cover
+                  :position 'relative
+                  :display 'flex
+                  :flex-direction 'column
+                  :align-items 'center
+                  :justify-content 'center
+                  }}
+    [:div
+     {:style {:height 0
+              :overflow 'hidden
+              :padding-top "45%"
+              :width "80%"
+              :position 'relative
+              :background-color 'white}}
+     [:iframe {:src "https://app.pitch.com/app/embed/294106da-dd27-4665-93ea-c41f88abc027"
+               :allow "fullscreen"
+               :allowfullscreen ""
+               :width "100%"
+               :height "100%"
+               :style {:position 'absolute
+                       :top 0
+                       :left 0
+                       :right 0
+                       :bottom 0
+                       :border "none"}}]]]
+   
+   [:div {:style {:position 'absolute
+                  :bottom 0
+                  :left 0
+                  :right 0
+                  :padding 20
+                  :text-align 'center
+                  :font-size "1vw"}}
+    "Limited Partner Deck"]])
 
 (defn fund-intro-section []
   [:div {:style {:width "100%"
@@ -1164,6 +1235,7 @@
                     :height "100%"
                     :style {:font-family "'Noto Serif', serif"}}}
       [surf-club-hero-section]
+      [dp-pitch-embed]
       [fund-intro-section]
       [fund-highlights-section]
       [impetus-section]
@@ -1177,3 +1249,4 @@
       [portfolio-strategy-section]
       [fund-summary-section]
       [:div {:style {:height 400}}]])})
+
