@@ -241,7 +241,7 @@
                     ;;:max-width 1200
                     }}]
 
-     [:img {:src "/img/surf-club-partners-logo.svg"
+     #_[:img {:src "/img/surf-club-partners-logo.svg"
             :style {:position 'absolute
                     :top 40
                     :right 40
