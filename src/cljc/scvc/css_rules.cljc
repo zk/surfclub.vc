@@ -26,12 +26,12 @@
    [:.our-team-section
     [:h3
      {:font-size "30px"}
-     (at-media bp-xs
-       [:& {:font-size "13px"}])]
+     #_(at-media bp-xs
+         [:& {:font-size "13px"}])]
     [:h4
      {:margin-bottom "4px"}
-     (at-media bp-xs
-       [:& {:font-size "9px"}])]
+     #_(at-media bp-xs
+         [:& {:font-size "9px"}])]
     [:p
-     (at-media bp-xs
-       [:& {:font-size "12px"}])]]])
+     #_(at-media bp-xs
+         [:& {:font-size "12px"}])]]])

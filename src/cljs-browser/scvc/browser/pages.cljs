@@ -231,14 +231,15 @@
    [:div
     [:div
      {:style {:width "100%"
-              :max-width 1200
+              ;;:max-width 1200
               :margin "0 auto 60px auto"
               :position 'relative}}
      [:img {:src "/img/team-photo.jpg"
             :style {:width "100%"
                     :display 'block
                     :margin "0 auto 60px auto"
-                    :max-width 1200}}]
+                    ;;:max-width 1200
+                    }}]
 
      [:img {:src "/img/surf-club-partners-logo.svg"
             :style {:position 'absolute
@@ -251,53 +252,33 @@
       [:div {:style {:align-items 'center}}
        [ui/g
         {:gap 24}
-        
-        [:div.row
-         [:div.col-4
-          [ui/g {:gap  24}
-           [ui/g {:gap 4}
-            [:h3
-             {:style {:font-weight 'normal
-                      :font-size 38}}
-             "Vu Tran"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "General Partner"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "2x YC Founder, Snap Crypto engineering research lead, serial entrepreneur, real estate investor, experienced venture capitalist."]
-            [:p "Vu has a deep technical and product background. He can write legitimately good code and has lead large scale engineering efforts at both Postmates and Snapchat as an individual contributor and as a senior manager."]]]]
-         [:div.col-4
-          [ui/g
-           {:gap 24}
-           [ui/g {:gap 4}
-            [:h3
-             {:style {:font-weight 'normal
-                      :font-size 38}}
-             "Zack Kim"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "General Partner"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "YC Founder, former Zaarly CTO, angel investor, LISP hacker, horse rancher."]
-            [:p "Zack comes from a deeply technical background. As a Neurosurgical methods researcher he aided individuals suffering from Parkinson's disease in reducing essential tremors via an electrical impulse device."]]]]
-         [:div.col-4
-          [ui/g
-           {:gap  24}
-           [ui/g {:gap 4}
-            [:h3
-             {:style {:font-weight 'normal
-                      :font-size 38}}
-             "Josh Leong"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "General Partner"]
-            [:h4
-             {:style {:margin-bottom 20}}
-             "YC Founder, Google Assistant machine vision research, autonomous car design. Airbnb principal, Microsoft Excel lead designer, shorts enthusiast."]
-            [:p "Inspired by his time collaborating with  CDG the former Xerox Parc Researchers famous for inventing the first two computing revolutions, Josh is investing and inventing in the next personal computation revolution."]]]]
-         ]]]]]]])
+        (into
+          [:div.row]
+          (->> [{:name "Vu Tran"
+                 :creds "2x YC Founder, Snap Crypto engineering research lead, serial entrepreneur, real estate investor, experienced venture capitalist."
+                 :desc "Vu has a deep technical and product background. He can write legitimately good code and has lead large scale engineering efforts at both Postmates and Snapchat as an individual contributor and as a senior manager."}
+                {:name "Zack Kim"
+                 :creds "YC Founder, former Zaarly CTO, angel investor, LISP hacker, horse rancher."
+                 :desc "Zack comes from a deeply technical background. As a Neurosurgical methods researcher he aided individuals suffering from Parkinson's disease in reducing essential tremors via an electrical impulse device."}
+                {:name "Josh Leong"
+                 :creds "YC Founder, Google Assistant machine vision research, autonomous car design. Airbnb principal, Microsoft Excel lead designer, shorts enthusiast."
+                 :desc "Inspired by his time collaborating with  CDG the former Xerox Parc Researchers famous for inventing the first two computing revolutions, Josh is investing and inventing in the next personal computation revolution."}]
+               (map (fn [{:keys [name creds desc]}]
+                      [:div.col-xs-12.col-lg-4
+                       [ui/g {:gap 24
+                              :style {:margin-bottom 40}}
+                        [ui/g {:gap 4}
+                         [:h3
+                          {:style {:font-weight 'normal
+                                   :font-size 38}}
+                          name]
+                         [:h4
+                          {:style {:margin-bottom 20}}
+                          "General Partner"]
+                         [:h4
+                          {:style {:margin-bottom 20}}
+                          creds]
+                         [:p desc]]]]))))]]]]]])
 
 (defn lp-alluvial-cities-section []
   [:div
@@ -390,7 +371,7 @@
        [:div.col-lg-10.offset-lg-1
         [btn/button
          {:label "Sign up for the Beta"
-          :href "https://docs.google.com/forms/d/e/1FAIpQLSdtRKBzkVHPbqNwed2i5NqIziqbh9Jrweq4_8vPRMtz4_ju3g/viewform"
+          :href "https://joshleong.typeform.com/to/P0Dps1jr"
           :target "_blank"
           :style {:background-color "#34A1F4"
                   :margin "0 auto 20px auto"
